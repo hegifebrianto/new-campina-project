@@ -18,6 +18,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rajdhani:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: 'don-jose';
+  src: url("../fonts/DonJose_Black.ttf") format("truetype"), url("../fonts/DonJose_Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-dark-blue: #004a80;
@@ -56,7 +63,7 @@
 
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2624,7 +2631,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0 1rem;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2862,7 +2869,7 @@ textarea.form-control-lg {
   display: block;
   width: 100%;
   padding: 0 3rem 0 1rem;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3532,7 +3539,7 @@ textarea.form-control-lg {
 
 .btn {
   display: inline-block;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-weight: 400;
   line-height: 1.875rem;
   color: #6d707f;
@@ -6845,7 +6852,7 @@ fieldset:disabled .btn {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6958,7 +6965,7 @@ fieldset:disabled .btn {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -15304,7 +15311,7 @@ img {
 
 .section-title-03 .sub-title {
   font-size: 18px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-weight: 400;
   text-transform: uppercase;
   color: #8b8b8b;
@@ -18365,7 +18372,7 @@ blockquote .blockquote-name::before {
 .single-product .product-content .title a {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   color: #4c4c4c;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -18631,7 +18638,7 @@ blockquote .blockquote-name::before {
 .single-product-02 .product-content .title a {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   color: #4c4c4c;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -19565,7 +19572,7 @@ blockquote .blockquote-name::before {
 .marker-wrapper .image-pointer .pointer-box .name a {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   color: #4c4c4c;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -20065,7 +20072,7 @@ blockquote .blockquote-name::before {
 }
 
 .shop-top-bar .shop-sort .nice-select .list .option {
-  font-family: "Rubik", sans-serif;
+  font-family: 'don-jose';
   font-size: 14px;
   line-height: 28px;
   list-style: none;
