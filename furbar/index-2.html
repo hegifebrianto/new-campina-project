@@ -28,8 +28,18 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    
     <style>
+        #products::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            background: url('../furbar/assets/images/campina/Vector.png');
+        }
         #video-section::after {
             content: '';
             display: block;
@@ -76,7 +86,7 @@
 
 
     <!-- Header Start  -->
-    <div class="header-area header-white d-lg-block" style="margin-top:50px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: absolute;">
+    <div class="header-area header-white d-none d-lg-block" style="margin-top:50px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: absolute;">
         <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-lg-3">
@@ -387,12 +397,13 @@
     <!-- style=" background-image: url('../furbar/assets/images/campina/vector-white-blue.png') !important;background-repeat: no-repeat;" -->
     <!-- New Product Section Start -->
 
-    <div class="section section-padding overflow-hidden" style=" position: relative;
+    <div id="products" class="section section-padding overflow-hidden" style=" position: relative;
     background-image: url(../furbar/assets/images/campina/vector-white-blue.png) !important;
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 1;
-    margin-top: -100px;">
-        <div class="container"  >
+    margin-top: -106px;">
+        <div class="container" style="padding-block: 100px;">
 
             <!-- Section Title Start -->
             <div class="section-title-02 text-center">
@@ -1317,7 +1328,7 @@
 
 
         </div>
-        <div class="bottom-page" style="background-image: url('../furbar/assets/images/campina/Vector.png');height: 600px;margin-top:-450px;z-index: 1;"></div>
+        <!-- <div class="bottom-page" style="background-image: url('../furbar/assets/images/campina/Vector.png');height: 600px;margin-top:-450px;z-index: 1;"></div> -->
     </div>
     
 
@@ -1328,7 +1339,7 @@
     z-index: 5;
     margin-top: -175px;">
      <!-- video section start -->
-     <div id="video-section" class="position-relative d-flex align-items-center justify-content-center" style="height: 100vh; ">
+     <div id="video-section" class="position-relative d-flex align-items-center justify-content-center" style="height: 870px; ">
         <video playsinline autoplay muted loop poster="cake.jpg" width="100%" class="position-absolute" style="z-index: 0; mask-image: url('../furbar/assets/images/campina/vector-white-blue.png');  -webkit-mask-image: url('../furbar/assets/images/campina/vector-white-blue.png'); -webkit-mask-size: cover;">
             <source src="../furbar/assets/videos/Campina.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -1364,45 +1375,22 @@
     <!-- footer section end -->
 
     <!-- Countdown Section Start -->
-    <div class="section section-padding overflow-hidden"  style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-yellow.png') !important;background-repeat: no-repeat;background-repeat: no-repeat;
+    <div class="section section-padding overflow-hidden"  style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-yellow.png') !important;background-repeat: no-repeat;background-size: cover;
     z-index: 6;
     margin-top: -175px; 
     height: 700px;">
-        <div class="container">
-            <div class="countdown-main-wrapper mt-n10">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-6">
-                        <!-- Countdown Images Start -->
-                        <div class="countdown-images">
-                            <!-- <div class="shape-1"></div>
-                            <div class="shape-2"></div>
-                            <div class="shape-3"></div> -->
-
-                            <div class="">
-                                <img  src="../furbar/assets/images/campina/person-campina.png" alt="" width="500" height="380" style="  display: block;
-                                margin-left: auto;
-                                margin-right: auto;">
-                            </div>
-                        </div>
-                        <!-- Countdown Images End -->
+        <div class="container"style="padding-block: 100px;">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <img src="../furbar/assets/images/campina/person-campina.png" alt="">
+                </div>
+                
+                <div class="col-lg-6">
+                    <div id="become-a-reseller" class="position-relative">
+                        <h1 class="mb-3" style="font-family: 'don-jose'; color: #3798C7; font-size: 71px; line-height: 63px;">BECOME <br> A RESELLER </h1>
+                        <p class="fs-5 mb-5" style="color: #000000; font-family: Nunito; line-height: 25px;">Kami merupakan salah satu produsen es krim ternama di Indonesia, dengan rangkaian produk yang selalu menjadi juara di hati konsumen.</p>
+                        <a href="#" class="btn btn-primary btn-hover-dark btn-lg" style="padding-inline: 75px;">join now</a>
                     </div>
-                    <div class="col-lg-6">
-                        <!-- Countdown Content Start -->
-                        <div class="countdown-content">
-                            
-                            <h2 class="title" style="font-family: 'don-jose';color: #3798C7;">BECOME
-                                A Reseller ?</h2>
-                            <p style="font-family: 'nunito'; color: black;">Kami merupakan salah satu produsen es krim ternama di Indonesia, dengan rangkaian produk yang selalu menjadi juara di hati konsumen.</p>
-
-                           
-
-                            <a href="#" class="btn btn-primary btn-hover-dark">Shop Now</a>
-                        </div>
-                        <!-- Countdown Content End -->
-                    </div>
-
-                   
                 </div>
             </div>
         </div>
@@ -1416,7 +1404,7 @@
   
 
     <!-- Footer Section Start -->
-    <div class="section footer-section section-padding overflow-hidden" style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-white-curve.png') !important;background-repeat: no-repeat;background-repeat: no-repeat;
+    <div class="section footer-section section-padding overflow-hidden" style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-white-curve.png') !important;background-repeat: no-repeat;background-size: cover;
     z-index: 8;
     margin-top: -100px; 
     height: 60%;">
