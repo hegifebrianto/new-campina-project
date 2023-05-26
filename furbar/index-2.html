@@ -28,8 +28,53 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    
     <style>
+        .nav-menu li a {
+            font-family: 'nunito';
+            font-weight: 900 !important;
+            color: #2475BB !important;
+            font-size: 16px !important;
+            width: max-content;
+        }
+
+        .nav-menu .sub-menu,
+        .nav-menu .mega-sub-menu {
+            border-radius: 20px !important;
+            border: 3px solid #ffffff !important;
+            background: #2475BB !important;
+        }
+
+        .menu-title {
+            font-family: 'don-jose' !important;
+            font-weight: 900 !important;
+            border-bottom-style: dashed !important;
+        }
+
+        .nav-menu .mega-sub-menu {
+            padding: 50px !important;
+            justify-content: space-around !important;
+        }
+
+        .nav-menu .sub-menu a,
+        .nav-menu .mega-sub-menu a {
+            color: #ffffff !important;
+        }
+
+        .nav-menu .mega-sub-menu .menu-item a {
+            font-weight: 600 !important;
+        }
+
+        #products::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            background: url('../furbar/assets/images/campina/Vector.png');
+        }
         #video-section::after {
             content: '';
             display: block;
@@ -66,6 +111,9 @@
         }
     </style>
 
+    <!-- parallax -->
+    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css">
+
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
     <!-- <link rel="stylesheet" href="assets/css/vendor/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -76,182 +124,219 @@
 
 
     <!-- Header Start  -->
-    <div class="header-area header-white d-lg-block" style="margin-top:50px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: absolute;">
+    <div class="header-area header-sticky header-white d-none d-lg-block p-0" style="margin-top:25px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: fixed;">
         <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <!-- Header Logo Start -->
-                    <div class="header-logo">
-                        <!-- <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a> -->
-                    </div>
-                    <!-- Header Logo End -->
-                </div>
-                <div class="col-lg-6">
+            <div class="row align-items-center justify-content-around position-absolute" style="top: -15px; width: 100%;">
+                <div class="col-lg-5 mt-2">
                     <div class="header-menu">
                         <ul class="nav-menu">
                             <li>
-                                <a href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home 01</a></li>
-                                    <li><a href="index-2.html">Home 02</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li style="top:-70px;"><img src="assets/images/campina/logo-campina.png" alt=""></li>
-                            <li>
-                                <a href="#">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Blog Grid</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                            <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-                                            <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog List</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                                            <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog Details</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-details-left-sidebar.html">Blog details Left Sidebar</a></li>
-                                            <li><a href="blog-details-right-sidebar.html">Blog details Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                                <a href="#">perusahaan</a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a href="#" class="menu-title">perusahaan</a>
 
+                                        <ul class="menu-item">
+                                            <li><a href="#">gambaran umum</a></li>
+                                            <li><a href="#">management</a></li>
+                                            <li><a href="#">penghargaan & sertifikasi campina</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-title">tata kelola</a>
+
+                                        <ul class="menu-item">
+                                            <li><a href="#">komite audit</a></li>
+                                            <li><a href="#">sekretaris perusahaan</a></li>
+                                            <li><a href="#">audit internal</a></li>
+                                            <li><a href="#">pedoman direksi & komisaris</a></li>
+                                            <li><a href="#">pedoman perilaku</a></li>
+                                            <li><a href="#">pernyataan independensi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-title">investor</a>
+
+                                        <ul class="menu-item">
+                                            <li><a href="#">laporan tahunan</a></li>
+                                            <li><a href="#">laporan keberlanjutan</a></li>
+                                            <li><a href="#">laporan keuangan</a></li>
+                                            <li><a href="#">corporate presentation</a></li>
+                                            <li><a href="#">prospektur perusahaan</a></li>
+                                            <li><a href="#">RUPS</a></li>
+                                            <li><a href="#">lembaga & profesi penunjang</a></li>
+                                            <li><a href="#">pasar modal</a></li>
+                                            <li><a href="#">informasi</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">produk</a></li>
+                            <li>
+                                <a href="#">berita & event</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">news</a></li>
+                                    <li><a href="">event</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <!-- Header Meta Start -->
-                    <div class="header-meta">
-
-                        <div class="dropdown">
-                            <a class="action" href="#" role="button" data-bs-toggle="dropdown"> <i class="pe-7s-search"></i> </a>
-
-                            <div class="dropdown-menu dropdown-search">
-                                <!-- Header Search Start -->
-                                <div class="header-search">
-                                    <form action="#">
-                                        <input type="text" placeholder="Enter your search key ... ">
-                                        <button><i class="pe-7s-search"></i></button>
-                                    </form>
-                                </div>
-                                <!-- Header Search End -->
-                            </div>
-                        </div>
-
-                        <div class="dropdown">
-                            <a class="action" href="#" role="button" data-bs-toggle="dropdown"><i class="pe-7s-user"></i></a>
-
-                            <ul class="dropdown-menu dropdown-profile">
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="login.html">Sign In</a></li>
-                            </ul>
-                        </div>
-                        <a class="action" href="wishlist.html"><i class="pe-7s-like"></i></a>
-
-                        <div class="dropdown">
-                            <a class="action" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="pe-7s-shopbag"></i>
-                                <span class="number">3</span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-cart">
-                                <div class="cart-content" id="cart-content">
-                                    <ul>
-                                        <li>
-                                            <!-- Single Cart Item Start -->
-                                            <div class="single-cart-item">
-                                                <div class="cart-thumb">
-                                                    <img src="assets/images/cart/cart-1.jpg" alt="Cart">
-                                                    <span class="product-quantity">1x</span>
-                                                </div>
-                                                <div class="cart-item-content">
-                                                    <h6 class="product-name">HAPPY COW</h6>
-                                                    <span class="product-price">$19.12</span>
-                                                    <div class="attributes-content">
-                                                        <span><strong>Color:</strong> White </span>
-                                                    </div>
-                                                    <a class="cart-remove" href="#"><i class="las la-times"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Cart Item End -->
-                                        </li>
-                                        <li>
-                                            <!-- Single Cart Item Start -->
-                                            <div class="single-cart-item">
-                                                <div class="cart-thumb">
-                                                    <img src="assets/images/cart/cart-2.jpg" alt="Cart">
-                                                    <span class="product-quantity">1x</span>
-                                                </div>
-                                                <div class="cart-item-content">
-                                                    <h6 class="product-name">HULA HULA</h6>
-                                                    <span class="product-price">$19.12</span>
-                                                    <div class="attributes-content">
-                                                        <span><strong>Color:</strong> White </span>
-                                                    </div>
-                                                    <a class="cart-remove" href="#"><i class="las la-times"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Cart Item End -->
-                                        </li>
-                                        <li>
-                                            <!-- Single Cart Item Start -->
-                                            <div class="single-cart-item">
-                                                <div class="cart-thumb">
-                                                    <img src="assets/images/cart/cart-3.jpg" alt="Cart">
-                                                    <span class="product-quantity">1x</span>
-                                                </div>
-                                                <div class="cart-item-content">
-                                                    <h6 class="product-name">CASHEW</h6>
-                                                    <span class="product-price">$19.12</span>
-                                                    <div class="attributes-content">
-                                                        <span><strong>Color:</strong> White </span>
-                                                    </div>
-                                                    <a class="cart-remove" href="#"><i class="las la-times"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Cart Item End -->
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="cart-price">
-                                    <div class="cart-subtotals">
-                                        <div class="price-inline">
-                                            <span class="label">Subtotal</span>
-                                            <span class="value">$42.70</span>
-                                        </div>
-                                        <div class="price-inline">
-                                            <span class="label">Shipping</span>
-                                            <span class="value">$7.00</span>
-                                        </div>
-                                        <div class="price-inline">
-                                            <span class="label">Taxes</span>
-                                            <span class="value">$0.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="cart-total">
-                                        <div class="price-inline">
-                                            <span class="label">Total</span>
-                                            <span class="value">$49.70</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkout-btn">
-                                    <a href="checkout.html" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-2">
+                    <!-- Header Logo Start -->
+                    <div class="header-logo">
+                        <a href="#"><img src="assets/images/campina/logo-campina.png" height="126" alt="Logo"></a>
                     </div>
-                    <!-- Header Meta End -->
+                    <!-- Header Logo End -->
+                </div>
+                <div class="col-lg-5 mt-2">
+                    <div class="header-menu">
+                        <ul class="nav-menu">
+                            <li>
+                                <a href="#">fun creator</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">kreasi menu</a></li>
+                                    <li><a href="">games</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">kontak</a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a href="#" class="menu-title">hubungi kami</a>
+                                        <ul class="menu-item">
+                                            <li><a href="#">kantor pusat</a></li>
+                                            <li><a href="#">pemasaran, penjualan & distribusi</a></li>
+                                            <li><a href="#">hubungan investor</a></li>
+                                            <li><a href="#">cabang penjualan</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-title">layanan konsumen</a>
+                                        <ul class="menu-item">
+                                            <li><a href="#">syarat & ketentuan</a></li>
+                                            <li><a href="#">alamat & kontak</a></li>
+                                            <li><a href="#">pertanyaan & saran</a></li>
+                                            <li><a href="#">pertanyaan umum</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a class="action" href="#" role="button" data-bs-toggle="dropdown"> <i class="pe-7s-search" style="font-size: 24px; font-weight: 900;"></i> </a>
+            
+                                    <div class="dropdown-menu dropdown-search">
+                                        <!-- Header Search Start -->
+                                        <div class="header-search">
+                                            <form action="#">
+                                                <input type="text" placeholder="Enter your search key ... ">
+                                                <button><i class="pe-7s-search"></i></button>
+                                            </form>
+                                        </div>
+                                        <!-- Header Search End -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a class="action" href="#" role="button" data-bs-toggle="dropdown">
+                                        <i class="pe-7s-shopbag" style="font-size: 24px; font-weight: 900;"></i>
+                                    </a>
+        
+                                    <div class="dropdown-menu dropdown-cart">
+                                        <div class="cart-content" id="cart-content">
+                                            <ul>
+                                                <li>
+                                                    <!-- Single Cart Item Start -->
+                                                    <div class="single-cart-item">
+                                                        <div class="cart-thumb">
+                                                            <img src="assets/images/cart/cart-1.jpg" alt="Cart">
+                                                            <span class="product-quantity">1x</span>
+                                                        </div>
+                                                        <div class="cart-item-content">
+                                                            <h6 class="product-name">HAPPY COW</h6>
+                                                            <span class="product-price">$19.12</span>
+                                                            <div class="attributes-content">
+                                                                <span><strong>Color:</strong> White </span>
+                                                            </div>
+                                                            <a class="cart-remove" href="#"><i class="las la-times"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Single Cart Item End -->
+                                                </li>
+                                                <li>
+                                                    <!-- Single Cart Item Start -->
+                                                    <div class="single-cart-item">
+                                                        <div class="cart-thumb">
+                                                            <img src="assets/images/cart/cart-2.jpg" alt="Cart">
+                                                            <span class="product-quantity">1x</span>
+                                                        </div>
+                                                        <div class="cart-item-content">
+                                                            <h6 class="product-name">HULA HULA</h6>
+                                                            <span class="product-price">$19.12</span>
+                                                            <div class="attributes-content">
+                                                                <span><strong>Color:</strong> White </span>
+                                                            </div>
+                                                            <a class="cart-remove" href="#"><i class="las la-times"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Single Cart Item End -->
+                                                </li>
+                                                <li>
+                                                    <!-- Single Cart Item Start -->
+                                                    <div class="single-cart-item">
+                                                        <div class="cart-thumb">
+                                                            <img src="assets/images/cart/cart-3.jpg" alt="Cart">
+                                                            <span class="product-quantity">1x</span>
+                                                        </div>
+                                                        <div class="cart-item-content">
+                                                            <h6 class="product-name">CASHEW</h6>
+                                                            <span class="product-price">$19.12</span>
+                                                            <div class="attributes-content">
+                                                                <span><strong>Color:</strong> White </span>
+                                                            </div>
+                                                            <a class="cart-remove" href="#"><i class="las la-times"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Single Cart Item End -->
+                                                </li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="cart-price">
+                                            <div class="cart-subtotals">
+                                                <div class="price-inline">
+                                                    <span class="label">Subtotal</span>
+                                                    <span class="value">$42.70</span>
+                                                </div>
+                                                <div class="price-inline">
+                                                    <span class="label">Shipping</span>
+                                                    <span class="value">$7.00</span>
+                                                </div>
+                                                <div class="price-inline">
+                                                    <span class="label">Taxes</span>
+                                                    <span class="value">$0.00</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart-total">
+                                                <div class="price-inline">
+                                                    <span class="label">Total</span>
+                                                    <span class="value">$49.70</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-btn">
+                                            <a href="checkout.html" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="px-2 ms-5"><a href="#">ID</a></li>
+                            <hr style="height: 24px; width: 2px; background: #2475BB; margin: 1.7rem 0;">
+                            <li class="px-2"><a href="#" style="color: gray !important">EN</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,6 +467,7 @@
                 </div>
             </div>
         </div>
+        <img src="../furbar/assets/images/campina/decoration-parallax-1.png" alt="parallax 1" class="position-absolute bottom-0 left-0 parallax-scroll" data-speed=".1" style="z-index: 2;">
     </div>
     <!-- Slider Section End -->
     <div style="background-image: url('../furbar/assets/images/campina/mitra-campina.png');background-repeat: no-repeat;width:200px;top:600px;right:-70px;height: 200px;z-index: 99999;position: fixed !important;"></div>
@@ -389,12 +475,13 @@
     <!-- style=" background-image: url('../furbar/assets/images/campina/vector-white-blue.png') !important;background-repeat: no-repeat;" -->
     <!-- New Product Section Start -->
 
-    <div class="section section-padding overflow-hidden" style=" position: relative;
+    <div id="products" class="section section-padding overflow-hidden" style=" position: relative;
     background-image: url(../furbar/assets/images/campina/vector-white-blue.png) !important;
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 1;
-    margin-top: -100px;">
-        <div class="container"  >
+    margin-top: -106px;">
+        <div class="container" style="padding-block: 100px;">
 
             <!-- Section Title Start -->
             <div class="section-title-02 text-center">
@@ -466,7 +553,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">ARIEL</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -710,7 +797,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">CASHEW</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -778,7 +865,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">ARIEL</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -800,7 +887,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">HAPPY COW</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -914,7 +1001,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">MOCHI DUO</a></h4>
-                                           
+                                            
                                         </div>
                                     </div>
                                     <!-- Single Product End -->
@@ -959,7 +1046,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">ARIEL</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -981,7 +1068,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">MOCHI DUO</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -1001,7 +1088,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">HULA HULA</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -1090,7 +1177,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">HULA HULA</a></h4>
-                                           
+                                            
                                         </div>
                                     </div>
                                     <!-- Single Product End -->
@@ -1157,7 +1244,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4 class="title"><a href="product-details.html">MOCHI DUO</a></h4>
-                                           
+                                            
                                         </div>
 
                                     </div>
@@ -1308,18 +1395,20 @@
 
 
         </div>
-        <div class="bottom-page" style="background-image: url('../furbar/assets/images/campina/Vector.png');height: 600px;margin-top:-450px;z-index: 1;"></div>
+        <!-- <div class="bottom-page" style="background-image: url('../furbar/assets/images/campina/Vector.png');height: 600px;margin-top:-450px;z-index: 1;"></div> -->
     </div>
     
 
     <!-- New Product Section End -->
 
-    <div class="section section-padding overflow-hidden" style=" position: relative;
+    <div class="section section-padding" style=" position: relative;
     background-repeat: no-repeat;
     z-index: 5;
     margin-top: -175px;">
+        <img src="../furbar/assets/images/campina/decoration-parallax-2.png" alt="parallax 2" class="position-absolute top-0 end-0 parallax-scroll" data-speed=".1" style="z-index: 5;">
+        <img src="../furbar/assets/images/campina/decoration-parallax-3.png" alt="parallax 1" class="position-absolute bottom-0 left-0 parallax-scroll" data-speed=".1" style="z-index: 5;">
      <!-- video section start -->
-     <div id="video-section" class="position-relative d-flex align-items-center justify-content-center" style="height: 100vh; ">
+     <div id="video-section" class="position-relative d-flex align-items-center justify-content-center" style="height: 870px; ">
         <video playsinline autoplay muted loop poster="cake.jpg" width="100%" class="position-absolute" style="z-index: 0; mask-image: url('../furbar/assets/images/campina/vector-white-blue.png');  -webkit-mask-image: url('../furbar/assets/images/campina/vector-white-blue.png'); -webkit-mask-size: cover;">
             <source src="../furbar/assets/videos/Campina.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -1355,45 +1444,23 @@
     <!-- footer section end -->
 
     <!-- Countdown Section Start -->
-    <div class="section section-padding overflow-hidden"  style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-yellow.png') !important;background-repeat: no-repeat;background-repeat: no-repeat;
+    <div class="section section-padding overflow-hidden"  style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-yellow.png') !important;background-repeat: no-repeat;background-size: cover;
     z-index: 6;
     margin-top: -175px; 
     height: 700px;">
-        <div class="container">
-            <div class="countdown-main-wrapper mt-n10">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-6">
-                        <!-- Countdown Images Start -->
-                        <div class="countdown-images">
-                            <!-- <div class="shape-1"></div>
-                            <div class="shape-2"></div>
-                            <div class="shape-3"></div> -->
-
-                            <div class="">
-                                <img  src="../furbar/assets/images/campina/person-campina.png" alt="" width="500" height="380" style="  display: block;
-                                margin-left: auto;
-                                margin-right: auto;">
-                            </div>
-                        </div>
-                        <!-- Countdown Images End -->
+        <img src="../furbar/assets/images/campina/decoration-parallax-4.png" alt="parallax 1" class="position-absolute bottom-0 end-0 parallax-scroll" data-speed=".1">
+        <div class="container"style="padding-block: 100px;">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <img src="../furbar/assets/images/campina/person-campina.png" alt="">
+                </div>
+                
+                <div class="col-lg-6">
+                    <div id="become-a-reseller" class="position-relative">
+                        <h1 class="mb-3" style="font-family: 'don-jose'; color: #3798C7; font-size: 71px; line-height: 63px;">BECOME <br> A RESELLER </h1>
+                        <p class="fs-5 mb-5" style="color: #000000; font-family: Nunito; line-height: 25px;">Kami merupakan salah satu produsen es krim ternama di Indonesia, dengan rangkaian produk yang selalu menjadi juara di hati konsumen.</p>
+                        <a href="#" class="btn btn-primary btn-hover-dark btn-lg" style="padding-inline: 75px;">join now</a>
                     </div>
-                    <div class="col-lg-6">
-                        <!-- Countdown Content Start -->
-                        <div class="countdown-content">
-                            
-                            <h2 class="title" style="font-family: 'don-jose';color: #3798C7;">BECOME
-                                A Reseller ?</h2>
-                            <p style="font-family: 'nunito'; color: black;">Kami merupakan salah satu produsen es krim ternama di Indonesia, dengan rangkaian produk yang selalu menjadi juara di hati konsumen.</p>
-
-                           
-
-                            <a href="#" class="btn btn-primary btn-hover-dark">Shop Now</a>
-                        </div>
-                        <!-- Countdown Content End -->
-                    </div>
-
-                   
                 </div>
             </div>
         </div>
@@ -1407,7 +1474,7 @@
   
 
     <!-- Footer Section Start -->
-    <div class="section footer-section section-padding overflow-hidden" style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-white-curve.png') !important;background-repeat: no-repeat;background-repeat: no-repeat;
+    <div class="section footer-section section-padding overflow-hidden" style=" position: relative;background-image: url('../furbar/assets/images/campina/vector-white-curve.png') !important;background-repeat: no-repeat;background-size: cover;
     z-index: 8;
     margin-top: -100px; 
     height: 60%;">
@@ -1538,6 +1605,20 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- parallex -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js?v=7"></script>
+
+    <script>
+        gsap.to(".parallax-scroll", {
+            scrollTrigger: {
+                scrub: true
+            }, 
+            y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+            ease: "none"
+        });
+    </script>
 
 </body>
 
