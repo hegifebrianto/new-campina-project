@@ -101,7 +101,12 @@ hr {
 hr:not([size]) {
   height: 1px;
 }
-
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -22508,6 +22513,10 @@ blockquote .blockquote-name::before {
 
 .form-message {
   margin-bottom: 0;
+}
+.font-nunito {
+  color: black;
+  font-family: 'nunito';
 }
 
 .form-message.error, .form-message.success {
