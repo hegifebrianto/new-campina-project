@@ -165,6 +165,19 @@
             font-size: 18px !important;
             font-weight: bold !important;
         }
+
+        .swiper-navigation-wrapper {
+            position: absolute;
+            bottom: 100px;
+            left: 10%;
+        }
+
+        .slider-active .swiper-button-prev,
+        .slider-active .swiper-button-next {
+            position: relative;
+            right: unset;
+            left: unset;
+        }
     </style>
 
     <!-- parallax -->
@@ -520,8 +533,10 @@
                     <!-- Single Slider End  -->
 
                     <!-- Add Arrows -->
-                    <div class="swiper-button-next p-0"><i class="pe-7s-angle-right fw-bold fs-2" style="color: #2475BB"></i></div>
-                    <div class="swiper-button-prev p-0"><i class="pe-7s-angle-left fw-bold fs-2" style="color: #2475BB"></i></div>
+                    <div class="swiper-navigation-wrapper d-flex gap-2">
+                        <div class="swiper-button-prev p-0"><i class="pe-7s-angle-left fw-bold fs-2" style="color: #2475BB"></i></div>
+                        <div class="swiper-button-next p-0"><i class="pe-7s-angle-right fw-bold fs-2" style="color: #2475BB"></i></div>
+                    </div>
 
                 </div>
             </div>
@@ -910,7 +925,6 @@
     <!-- swiper -->
     <script>
         const swiper = new Swiper('.swiper', {
-            loop: true,
             slidesPerView: 4,
             navigation: {
                 nextEl: '.swiper-button-next',
