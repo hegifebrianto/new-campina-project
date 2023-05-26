@@ -137,6 +137,34 @@
         .swiper .single-product-02:hover img:not(.product-hover-image) {
             display: none;
         }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 20px;
+            background: white;
+            font-family: 'swiper-icons' !important;
+        }
+
+        .swiper-button-prev {
+            left: -50px;
+        }
+
+        .swiper-button-next {
+            right: -50px;
+        }
+
+        .swiper-button-prev::before,
+        .swiper-button-next::before {
+            display: none;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 18px !important;
+            font-weight: bold !important;
+        }
     </style>
 
     <!-- parallax -->
@@ -492,8 +520,8 @@
                     <!-- Single Slider End  -->
 
                     <!-- Add Arrows -->
-                    <div class="swiper-button-next">Next</div>
-                    <div class="swiper-button-prev">Prev</div>
+                    <div class="swiper-button-next p-0"><i class="pe-7s-angle-right fw-bold fs-2" style="color: #2475BB"></i></div>
+                    <div class="swiper-button-prev p-0"><i class="pe-7s-angle-left fw-bold fs-2" style="color: #2475BB"></i></div>
 
                 </div>
             </div>
@@ -516,7 +544,7 @@
 
             <!-- Section Title Start -->
             <div class="section-title-02 text-center">
-                <h2 class="title" style="font-family: 'don-jose'; color: white;">Our Product</h2>
+                <h2 class="title" style="font-family: 'don-jose'; color: white; margin-inline: auto">Our Product</h2>
             </div>
             <!-- Section Title End -->
 
@@ -525,7 +553,7 @@
 
 
                 <!-- Product Tabs Content Start -->
-                <div class="product-tabs-content">
+                <div class="product-tabs-content position-relative">
                     <!-- Slider main container -->
                     <div class="swiper overflow-hidden">
                         <!-- Additional required wrapper -->
@@ -540,7 +568,7 @@
                                         </a>
                                     </div>
                                     <div class="product-content">
-                                        <h4 class="title"><a href="#">NEAPOLITAN</a></h4>
+                                        <h4 class="title"><a href="#" class="text-white fs-4">NEAPOLITAN</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -553,7 +581,7 @@
                                             </a>                                           
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">MOCHI DUO</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">MOCHI DUO</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -566,7 +594,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">ARIEL</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">ARIEL</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -579,7 +607,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">HAPPY COW</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">HAPPY COW</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -592,7 +620,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">HULA HULA</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">HULA HULA</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -605,7 +633,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">CASHEW</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">CASHEW</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -618,7 +646,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">FROZEN</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">FROZEN</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -631,7 +659,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4 class="title"><a href="#">HEART</a></h4>
+                                            <h4 class="title"><a href="#" class="text-white fs-4">HEART</a></h4>
                                         </div>
                                     </div>
                             </div>
@@ -640,12 +668,12 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
-                    <div class="d-flex justify-content-center mt-5">
-                        <a href="#" class="btn btn-primary btn-hover-dark btn-lg mt-5" style="padding-inline: 75px;">view all product</a>
-                    </div>
                 </div>
                 <!-- Product Tabs Content End -->
-
+                
+                <div class="d-flex justify-content-center" style="margin-top: 121px">
+                    <a href="#" class="btn btn-primary btn-hover-dark btn-lg" style="padding-inline: 75px;">view all product</a>
+                </div>
             </div>
             <!-- Product Wrapper 02 End -->
 
@@ -882,6 +910,7 @@
     <!-- swiper -->
     <script>
         const swiper = new Swiper('.swiper', {
+            loop: true,
             slidesPerView: 4,
             navigation: {
                 nextEl: '.swiper-button-next',
