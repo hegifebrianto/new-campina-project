@@ -35,6 +35,14 @@
             font-weight: 900 !important;
             color: #2475BB !important;
             font-size: 16px !important;
+            width: max-content;
+        }
+
+        .nav-menu .sub-menu,
+        .nav-menu .mega-sub-menu {
+            border-radius: 20px !important;
+            border: 3px solid #ffffff !important;
+            background: #2475BB !important;
         }
 
         .menu-title {
@@ -45,12 +53,10 @@
 
         .nav-menu .mega-sub-menu {
             padding: 50px !important;
-            justify-content: space-between !important;
-            border-radius: 50px !important;
-            border: 3px solid #ffffff !important;
-            background: #2475BB !important;
+            justify-content: space-around !important;
         }
 
+        .nav-menu .sub-menu a,
         .nav-menu .mega-sub-menu a {
             color: #ffffff !important;
         }
@@ -119,7 +125,7 @@
 
     <!-- Header Start  -->
     <div class="header-area header-sticky header-white d-none d-lg-block p-0" style="margin-top:25px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: fixed;">
-        <div class="position-relative">
+        <div class="container position-relative">
             <div class="row align-items-center justify-content-around position-absolute" style="top: -15px; width: 100%;">
                 <div class="col-lg-5 mt-2">
                     <div class="header-menu">
@@ -166,7 +172,13 @@
                                 </ul>
                             </li>
                             <li><a href="#">produk</a></li>
-                            <li><a href="#">berita & event</a></li>
+                            <li>
+                                <a href="#">berita & event</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">news</a></li>
+                                    <li><a href="">event</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -180,8 +192,36 @@
                 <div class="col-lg-5 mt-2">
                     <div class="header-menu">
                         <ul class="nav-menu">
-                            <li><a href="#">fun creator</a></li>
-                            <li><a href="#">kontak</a></li>
+                            <li>
+                                <a href="#">fun creator</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">kreasi menu</a></li>
+                                    <li><a href="">games</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">kontak</a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a href="#" class="menu-title">hubungi kami</a>
+                                        <ul class="menu-item">
+                                            <li><a href="#">kantor pusat</a></li>
+                                            <li><a href="#">pemasaran, penjualan & distribusi</a></li>
+                                            <li><a href="#">hubungan investor</a></li>
+                                            <li><a href="#">cabang penjualan</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-title">layanan konsumen</a>
+                                        <ul class="menu-item">
+                                            <li><a href="#">syarat & ketentuan</a></li>
+                                            <li><a href="#">alamat & kontak</a></li>
+                                            <li><a href="#">pertanyaan & saran</a></li>
+                                            <li><a href="#">pertanyaan umum</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                             <li>
                                 <div class="dropdown">
                                     <a class="action" href="#" role="button" data-bs-toggle="dropdown"> <i class="pe-7s-search" style="font-size: 24px; font-weight: 900;"></i> </a>
