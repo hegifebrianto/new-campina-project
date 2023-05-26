@@ -30,11 +30,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
+        .nav-menu li a {
+            font-family: 'nunito';
+            font-weight: 900 !important;
+            color: #2475BB !important;
+            font-size: 16px !important;
+        }
+
+        .menu-title {
+            font-family: 'don-jose' !important;
+            font-weight: 900 !important;
+            border-bottom-style: dashed !important;
+        }
+
+        .nav-menu .mega-sub-menu {
+            padding: 50px !important;
+            justify-content: space-between !important;
+            border-radius: 50px !important;
+            border: 3px solid #ffffff !important;
+            background: #2475BB !important;
+        }
+
+        .nav-menu .mega-sub-menu a {
+            color: #ffffff !important;
+        }
+
+        .nav-menu .mega-sub-menu .menu-item a {
+            font-weight: normal !important;
+        }
+
         #products::after {
             content: '';
             display: block;
             position: absolute;
-            bottom: -100px;
+            bottom: 0px;
             left: 0;
             width: 100%;
             height: 600px;
@@ -86,182 +115,185 @@
 
 
     <!-- Header Start  -->
-    <div class="header-area header-white d-none d-lg-block" style="margin-top:50px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: absolute;">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <!-- Header Logo Start -->
-                    <div class="header-logo">
-                        <!-- <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a> -->
-                    </div>
-                    <!-- Header Logo End -->
-                </div>
-                <div class="col-lg-6">
+    <div class="header-area header-sticky header-white d-none d-lg-block p-0" style="margin-top:50px;margin-left:50px;margin-right:50px;border-radius: 100px;width: 95%;height: 100px;position: fixed;">
+        <div class="position-relative">
+            <div class="row align-items-center justify-content-around position-absolute" style="top: -15px; width: 100%;">
+                <div class="col-lg-5 mt-2">
                     <div class="header-menu">
                         <ul class="nav-menu">
                             <li>
-                                <a href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home 01</a></li>
-                                    <li><a href="index-2.html">Home 02</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li style="top:-70px;"><img src="assets/images/campina/logo-campina.png" alt=""></li>
-                            <li>
-                                <a href="#">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Blog Grid</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                            <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-                                            <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog List</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                                            <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog Details</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-details-left-sidebar.html">Blog details Left Sidebar</a></li>
-                                            <li><a href="blog-details-right-sidebar.html">Blog details Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                                <a href="#">perusahaan</a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a href="#" class="menu-title">perusahaan</a>
 
+                                        <ul class="menu-item">
+                                            <li><a href="#">gambaran umum</a></li>
+                                            <li><a href="#">management</a></li>
+                                            <li><a href="#">penghargaan & sertifikasi campina</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-title">tata kelola</a>
+
+                                        <ul class="menu-item">
+                                            <li><a href="#">komite audit</a></li>
+                                            <li><a href="#">sekretaris perusahaan</a></li>
+                                            <li><a href="#">audit internal</a></li>
+                                            <li><a href="#">pedoman direksi & komisaris</a></li>
+                                            <li><a href="#">pedoman perilaku</a></li>
+                                            <li><a href="#">pernyataan independensi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-title">investor</a>
+
+                                        <ul class="menu-item">
+                                            <li><a href="#">laporan tahunan</a></li>
+                                            <li><a href="#">laporan keberlanjutan</a></li>
+                                            <li><a href="#">laporan keuangan</a></li>
+                                            <li><a href="#">corporate presentation</a></li>
+                                            <li><a href="#">prospektur perusahaan</a></li>
+                                            <li><a href="#">RUPS</a></li>
+                                            <li><a href="#">lembaga & profesi penunjang</a></li>
+                                            <li><a href="#">pasar modal</a></li>
+                                            <li><a href="#">informasi</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">produk</a></li>
+                            <li><a href="#">berita & event</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <!-- Header Meta Start -->
-                    <div class="header-meta">
-
-                        <div class="dropdown">
-                            <a class="action" href="#" role="button" data-bs-toggle="dropdown"> <i class="pe-7s-search"></i> </a>
-
-                            <div class="dropdown-menu dropdown-search">
-                                <!-- Header Search Start -->
-                                <div class="header-search">
-                                    <form action="#">
-                                        <input type="text" placeholder="Enter your search key ... ">
-                                        <button><i class="pe-7s-search"></i></button>
-                                    </form>
-                                </div>
-                                <!-- Header Search End -->
-                            </div>
-                        </div>
-
-                        <div class="dropdown">
-                            <a class="action" href="#" role="button" data-bs-toggle="dropdown"><i class="pe-7s-user"></i></a>
-
-                            <ul class="dropdown-menu dropdown-profile">
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="login.html">Sign In</a></li>
-                            </ul>
-                        </div>
-                        <a class="action" href="wishlist.html"><i class="pe-7s-like"></i></a>
-
-                        <div class="dropdown">
-                            <a class="action" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="pe-7s-shopbag"></i>
-                                <span class="number">3</span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-cart">
-                                <div class="cart-content" id="cart-content">
-                                    <ul>
-                                        <li>
-                                            <!-- Single Cart Item Start -->
-                                            <div class="single-cart-item">
-                                                <div class="cart-thumb">
-                                                    <img src="assets/images/cart/cart-1.jpg" alt="Cart">
-                                                    <span class="product-quantity">1x</span>
-                                                </div>
-                                                <div class="cart-item-content">
-                                                    <h6 class="product-name">HAPPY COW</h6>
-                                                    <span class="product-price">$19.12</span>
-                                                    <div class="attributes-content">
-                                                        <span><strong>Color:</strong> White </span>
-                                                    </div>
-                                                    <a class="cart-remove" href="#"><i class="las la-times"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Cart Item End -->
-                                        </li>
-                                        <li>
-                                            <!-- Single Cart Item Start -->
-                                            <div class="single-cart-item">
-                                                <div class="cart-thumb">
-                                                    <img src="assets/images/cart/cart-2.jpg" alt="Cart">
-                                                    <span class="product-quantity">1x</span>
-                                                </div>
-                                                <div class="cart-item-content">
-                                                    <h6 class="product-name">HULA HULA</h6>
-                                                    <span class="product-price">$19.12</span>
-                                                    <div class="attributes-content">
-                                                        <span><strong>Color:</strong> White </span>
-                                                    </div>
-                                                    <a class="cart-remove" href="#"><i class="las la-times"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Cart Item End -->
-                                        </li>
-                                        <li>
-                                            <!-- Single Cart Item Start -->
-                                            <div class="single-cart-item">
-                                                <div class="cart-thumb">
-                                                    <img src="assets/images/cart/cart-3.jpg" alt="Cart">
-                                                    <span class="product-quantity">1x</span>
-                                                </div>
-                                                <div class="cart-item-content">
-                                                    <h6 class="product-name">CASHEW</h6>
-                                                    <span class="product-price">$19.12</span>
-                                                    <div class="attributes-content">
-                                                        <span><strong>Color:</strong> White </span>
-                                                    </div>
-                                                    <a class="cart-remove" href="#"><i class="las la-times"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Cart Item End -->
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="cart-price">
-                                    <div class="cart-subtotals">
-                                        <div class="price-inline">
-                                            <span class="label">Subtotal</span>
-                                            <span class="value">$42.70</span>
-                                        </div>
-                                        <div class="price-inline">
-                                            <span class="label">Shipping</span>
-                                            <span class="value">$7.00</span>
-                                        </div>
-                                        <div class="price-inline">
-                                            <span class="label">Taxes</span>
-                                            <span class="value">$0.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="cart-total">
-                                        <div class="price-inline">
-                                            <span class="label">Total</span>
-                                            <span class="value">$49.70</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkout-btn">
-                                    <a href="checkout.html" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-2">
+                    <!-- Header Logo Start -->
+                    <div class="header-logo">
+                        <a href="#"><img src="assets/images/campina/logo-campina.png" height="126" alt="Logo"></a>
                     </div>
-                    <!-- Header Meta End -->
+                    <!-- Header Logo End -->
+                </div>
+                <div class="col-lg-5 mt-2">
+                    <div class="header-menu">
+                        <ul class="nav-menu">
+                            <li><a href="#">fun creator</a></li>
+                            <li><a href="#">kontak</a></li>
+                            <li>
+                                <div class="dropdown">
+                                    <a class="action" href="#" role="button" data-bs-toggle="dropdown"> <i class="pe-7s-search" style="font-size: 24px; font-weight: 900;"></i> </a>
+            
+                                    <div class="dropdown-menu dropdown-search">
+                                        <!-- Header Search Start -->
+                                        <div class="header-search">
+                                            <form action="#">
+                                                <input type="text" placeholder="Enter your search key ... ">
+                                                <button><i class="pe-7s-search"></i></button>
+                                            </form>
+                                        </div>
+                                        <!-- Header Search End -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a class="action" href="#" role="button" data-bs-toggle="dropdown">
+                                        <i class="pe-7s-shopbag" style="font-size: 24px; font-weight: 900;"></i>
+                                    </a>
+        
+                                    <div class="dropdown-menu dropdown-cart">
+                                        <div class="cart-content" id="cart-content">
+                                            <ul>
+                                                <li>
+                                                    <!-- Single Cart Item Start -->
+                                                    <div class="single-cart-item">
+                                                        <div class="cart-thumb">
+                                                            <img src="assets/images/cart/cart-1.jpg" alt="Cart">
+                                                            <span class="product-quantity">1x</span>
+                                                        </div>
+                                                        <div class="cart-item-content">
+                                                            <h6 class="product-name">HAPPY COW</h6>
+                                                            <span class="product-price">$19.12</span>
+                                                            <div class="attributes-content">
+                                                                <span><strong>Color:</strong> White </span>
+                                                            </div>
+                                                            <a class="cart-remove" href="#"><i class="las la-times"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Single Cart Item End -->
+                                                </li>
+                                                <li>
+                                                    <!-- Single Cart Item Start -->
+                                                    <div class="single-cart-item">
+                                                        <div class="cart-thumb">
+                                                            <img src="assets/images/cart/cart-2.jpg" alt="Cart">
+                                                            <span class="product-quantity">1x</span>
+                                                        </div>
+                                                        <div class="cart-item-content">
+                                                            <h6 class="product-name">HULA HULA</h6>
+                                                            <span class="product-price">$19.12</span>
+                                                            <div class="attributes-content">
+                                                                <span><strong>Color:</strong> White </span>
+                                                            </div>
+                                                            <a class="cart-remove" href="#"><i class="las la-times"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Single Cart Item End -->
+                                                </li>
+                                                <li>
+                                                    <!-- Single Cart Item Start -->
+                                                    <div class="single-cart-item">
+                                                        <div class="cart-thumb">
+                                                            <img src="assets/images/cart/cart-3.jpg" alt="Cart">
+                                                            <span class="product-quantity">1x</span>
+                                                        </div>
+                                                        <div class="cart-item-content">
+                                                            <h6 class="product-name">CASHEW</h6>
+                                                            <span class="product-price">$19.12</span>
+                                                            <div class="attributes-content">
+                                                                <span><strong>Color:</strong> White </span>
+                                                            </div>
+                                                            <a class="cart-remove" href="#"><i class="las la-times"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Single Cart Item End -->
+                                                </li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="cart-price">
+                                            <div class="cart-subtotals">
+                                                <div class="price-inline">
+                                                    <span class="label">Subtotal</span>
+                                                    <span class="value">$42.70</span>
+                                                </div>
+                                                <div class="price-inline">
+                                                    <span class="label">Shipping</span>
+                                                    <span class="value">$7.00</span>
+                                                </div>
+                                                <div class="price-inline">
+                                                    <span class="label">Taxes</span>
+                                                    <span class="value">$0.00</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart-total">
+                                                <div class="price-inline">
+                                                    <span class="label">Total</span>
+                                                    <span class="value">$49.70</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-btn">
+                                            <a href="checkout.html" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="px-2 ms-5"><a href="#">ID</a></li>
+                            <hr style="height: 24px; width: 2px; background: #2475BB; margin: 1.7rem 0;">
+                            <li class="px-2"><a href="#" style="color: gray !important">EN</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
