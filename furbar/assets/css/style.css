@@ -101,6 +101,12 @@ hr {
 hr:not([size]) {
   height: 1px;
 }
+.font-bold {
+  font-weight: bold !important;
+}
+.font-nunito-bold {
+  font-family: 'Nunito-Bold', arial !important;
+}
 .text-left {
   text-align: left;
 }
